@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17251e">
+<meta name="description" content="Maison Royale Luxury Hotel — an exceptional hospitality experience.">
+<title>Maison Royale | Luxury Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600;700&family=FiraGO:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="ka">
+
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">MAISON ROYALE</div>
+  <div class="preloader-line"><span></span></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<header class="header" id="header">
+  <a href="#home" class="brand">
+    <span class="brand-name">MAISON ROYALE</span>
+    <span class="brand-sub">LUXURY HOTEL & RESORT</span>
+  </a>
+
+  <nav class="navigation" id="navigation">
+    <a href="#home" data-i18n="home">მთავარი</a>
+    <a href="#about" data-i18n="about">ჩვენ შესახებ</a>
+    <a href="#rooms" data-i18n="rooms">ნომრები</a>
+    <a href="#experiences" data-i18n="experiences">გამოცდილება</a>
+    <a href="#restaurant" data-i18n="restaurant">რესტორანი</a>
+    <a href="#events" data-i18n="events">ღონისძიებები</a>
+    <a href="#gallery" data-i18n="gallery">გალერეა</a>
+    <a href="#contact" data-i18n="contact">კონტაქტი</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="language-switch" id="languageSwitch">EN</button>
+    <a href="#booking" class="header-book" data-i18n="bookNow">დაჯავშნა</a>
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2200&q=90')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=2200&q=90')"></div>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow" data-i18n="heroLabel">გამორჩეული სტუმართმოყვარეობა</span>
+    <h1 data-i18n-html="heroTitle">
+      აღმოაჩინეთ<br>
+      <span>განსაკუთრებული</span><br>
+      დასვენება
+    </h1>
+    <p data-i18n="heroText">
+      ადგილი, სადაც დახვეწილი ელეგანტურობა, განსაკუთრებული კომფორტი და დაუვიწყარი გამოცდილება ერთმანეთს ხვდება.
+    </p>
+    <div class="hero-buttons">
+      <a href="#rooms" class="button button-gold" data-i18n="discoverRooms">ნომრების აღმოჩენა</a>
+      <a href="#about" class="button button-outline" data-i18n="discoverMore">გაიგეთ მეტი</a>
+    </div>
+  </div>
+
+  <div class="hero-counter"><span id="slideNumber">01</span> / 03</div>
+  <div class="hero-scroll"><span data-i18n="scroll">ჩამოხვედით ქვემოთ</span><i class="fa-solid fa-arrow-down"></i></div>
+  <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide"><i class="fa-solid fa-arrow-left"></i></button>
+  <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide"><i class="fa-solid fa-arrow-right"></i></button>
+</section>
+
+<section class="quick-booking">
+  <div class="quick-booking-inner">
+    <div>
+      <span data-i18n="checkIn">ჩასვლა</span>
+      <input type="date" id="quickCheckIn">
+    </div>
+    <div>
+      <span data-i18n="checkOut">გასვლა</span>
+      <input type="date" id="quickCheckOut">
+    </div>
+    <div>
+      <span data-i18n="guests">სტუმრები</span>
+      <select id="quickGuests">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6+</option>
+      </select>
+    </div>
+    <button id="quickBookButton" class="quick-book-button">
+      <span data-i18n="checkAvailability">ხელმისაწვდომობა</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</section>
+
+<section class="section about-section" id="about">
+  <div class="about-image reveal-left">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=90" alt="Luxury hotel interior">
+    <div class="about-image-small">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Hotel interior">
+    </div>
+    <div class="about-stamp">EST.<br>2024</div>
+  </div>
+  <div class="about-text reveal-right">
+    <span class="eyebrow dark-eyebrow" data-i18n="aboutLabel">ჩვენი ისტორია</span>
+    <h2 data-i18n-html="aboutTitle">ელეგანტურობა<br><span>ყოველ დეტალში</span></h2>
+    <p data-i18n="aboutText">
+      Maison Royale მეტია, ვიდრე სასტუმრო. ეს არის სივრცე, სადაც ტრადიციული სტუმართმოყვარეობა თანამედროვე ფუფუნებას ერწყმის.
+    </p>
+    <div class="about-stats">
+      <div><strong class="counter" data-count="25">0</strong><span data-i18n="luxuryRooms">ლუქს ნომერი</span></div>
+      <div><strong class="counter" data-count="24">0</strong><span data-i18n="serviceHours">საათიანი მომსახურება</span></div>
+      <div><strong class="counter" data-count="5">0</strong><span data-i18n="starService">ვარსკვლავიანი გამოცდილება</span></div>
+    </div>
+    <a href="#experiences" class="text-link" data-i18n="learnMore">გაიგეთ მეტი</a>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>MAISON ROYALE</span><i class="fa-solid fa-star"></i>
+    <span>LUXURY & ELEGANCE</span><i class="fa-solid fa-star"></i>
+    <span>EXCEPTIONAL HOSPITALITY</span><i class="fa-solid fa-star"></i>
+    <span>MAISON ROYALE</span><i class="fa-solid fa-star"></i>
+    <span>LUXURY & ELEGANCE</span><i class="fa-solid fa-star"></i>
+    <span>EXCEPTIONAL HOSPITALITY</span><i class="fa-solid fa-star"></i>
+  </div>
+</div>
+
+<section class="section rooms-section" id="rooms">
+  <div class="section-heading reveal">
+    <span class="eyebrow dark-eyebrow" data-i18n="roomsLabel">დახვეწილი საცხოვრებელი</span>
+    <h2 data-i18n="roomsTitle">აღმოაჩინეთ ჩვენი ნომრები</h2>
+    <p data-i18n="roomsDescription">თითოეული ნომერი შექმნილია თქვენი კომფორტისთვის, დახვეწილი დიზაინითა და თანამედროვე კეთილმოწყობით.</p>
+  </div>
+
+  <div class="room-filters">
+    <button class="filter-button active" data-filter="all" data-i18n="allRooms">ყველა ნომერი</button>
+    <button class="filter-button" data-filter="classic" data-i18n="classic">კლასიკური</button>
+    <button class="filter-button" data-filter="deluxe" data-i18n="deluxe">დელუქსი</button>
+    <button class="filter-button" data-filter="suite" data-i18n="suite">სუიტა</button>
+  </div>
+
+  <div class="room-grid" id="roomGrid"></div>
+  <div class="center-button">
+    <a href="#booking" class="button button-dark" data-i18n="reserveStay">დაჯავშნეთ დასვენება</a>
+  </div>
+</section>
+
+<section class="experience-section" id="experiences">
+  <div class="section-heading light-heading reveal">
+    <span class="eyebrow" data-i18n="experienceLabel">აღმოაჩინეთ მეტი</span>
+    <h2 data-i18n="experienceTitle">გამოცდილება, რომელიც რჩება</h2>
+    <p data-i18n="experienceText">ისიამოვნეთ განსაკუთრებული სერვისებითა და დაუვიწყარი მომენტებით.</p>
+  </div>
+
+  <div class="experience-grid">
+    <article class="experience-card reveal">
+      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=900&q=85" alt="Swimming pool">
+      <div class="experience-info"><span>01 / RELAX</span><h3 data-i18n="pool">საცურაო აუზი</h3></div>
+    </article>
+    <article class="experience-card reveal">
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85" alt="Spa">
+      <div class="experience-info"><span>02 / WELLNESS</span><h3 data-i18n="spa">SPA & Wellness</h3></div>
+    </article>
+    <article class="experience-card reveal">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Fine dining">
+      <div class="experience-info"><span>03 / TASTE</span><h3 data-i18n="fineDining">გასტრონომია</h3></div>
+    </article>
+    <article class="experience-card reveal">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Events">
+      <div class="experience-info"><span>04 / CELEBRATE</span><h3 data-i18n="celebrations">ღონისძიებები</h3></div>
+    </article>
+  </div>
+</section>
+
+<section class="restaurant-section" id="restaurant">
+  <div class="restaurant-photo reveal-left">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=90" alt="Fine dining restaurant">
+  </div>
+  <div class="restaurant-content reveal-right">
+    <span class="eyebrow dark-eyebrow" data-i18n="restaurantLabel">გემო და ხელოვნება</span>
+    <h2 data-i18n-html="restaurantTitle">გასტრონომია<br><span>ახალი განზომილებით</span></h2>
+    <p data-i18n="restaurantText">აღმოაჩინეთ კულინარიული ხელოვნების განსაკუთრებული სამყარო, სეზონური ინგრედიენტები და დახვეწილი არომატები.</p>
+    <div class="restaurant-details">
+      <span><i class="fa-regular fa-clock"></i> 12:00 – 23:00</span>
+      <span><i class="fa-solid fa-utensils"></i> Fine Dining</span>
+    </div>
+    <a href="#contact" class="button button-gold" data-i18n="restaurantButton">აღმოაჩინეთ რესტორანი</a>
+  </div>
+</section>
+
+<section class="section events-section" id="events">
+  <div class="section-heading reveal">
+    <span class="eyebrow dark-eyebrow" data-i18n="eventsLabel">განსაკუთრებული მომენტები</span>
+    <h2 data-i18n="eventsTitle">ღონისძიებები Maison Royale-ში</h2>
+    <p data-i18n="eventsText">შექმენით დაუვიწყარი მოგონებები ჩვენს დახვეწილ სივრცეებში.</p>
+  </div>
+  <div class="event-grid">
+    <article class="event-card reveal">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Wedding">
+      <div><span data-i18n="eventOne">განსაკუთრებული დღე</span><h3 data-i18n="weddings">ქორწილები</h3><p data-i18n="weddingText">თქვენი ცხოვრების ყველაზე ლამაზი დღე ელეგანტურ გარემოში.</p></div>
+    </article>
+    <article class="event-card reveal">
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=85" alt="Conference">
+      <div><span data-i18n="eventTwo">ბიზნეს ღონისძიებები</span><h3 data-i18n="conferences">კონფერენციები</h3><p data-i18n="conferenceText">თანამედროვე გარემო თქვენი პროფესიული ღონისძიებებისთვის.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section gallery-section" id="gallery">
+  <div class="section-heading reveal">
+    <span class="eyebrow dark-eyebrow" data-i18n="galleryLabel">ვიზუალური ისტორია</span>
+    <h2 data-i18n="galleryTitle">Maison Royale-ის სამყარო</h2>
+    <p data-i18n="galleryText">დაათვალიერეთ სივრცეები, სადაც თითოეული დეტალი ესთეტიკას ქმნის.</p>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <button class="gallery-item gallery-large"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1100&q=85" alt="Hotel bedroom"><i class="fa-solid fa-expand"></i></button>
+    <button class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85" alt="Hotel interior"><i class="fa-solid fa-expand"></i></button>
+    <button class="gallery-item"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=85" alt="Pool"><i class="fa-solid fa-expand"></i></button>
+    <button class="gallery-item gallery-wide"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85" alt="Restaurant"><i class="fa-solid fa-expand"></i></button>
+    <button class="gallery-item"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85" alt="Spa"><i class="fa-solid fa-expand"></i></button>
+  </div>
+</section>
+
+<section class="booking-section" id="booking">
+  <div class="booking-background"></div>
+  <div class="booking-container">
+    <div class="booking-intro reveal">
+      <span class="eyebrow" data-i18n="bookingLabel">თქვენი დასვენება იწყება აქ</span>
+      <h2 data-i18n-html="bookingTitle">დაჯავშნეთ<br><span>განსაკუთრებული</span><br>გამოცდილება</h2>
+      <p data-i18n="bookingText">შეავსეთ ფორმა და მოითხოვეთ სასურველი ნომრის დაჯავშნა. ჩვენი გუნდი დაგიკავშირდებათ დეტალების დასადასტურებლად.</p>
+      <div class="booking-benefits">
+        <span><i class="fa-solid fa-check"></i><span data-i18n="benefitOne">პერსონალური მომსახურება</span></span>
+        <span><i class="fa-solid fa-check"></i><span data-i18n="benefitTwo">დაჯავშნის მოთხოვნის დადასტურება</span></span>
+        <span><i class="fa-solid fa-check"></i><span data-i18n="benefitThree">განსაკუთრებული შეთავაზებები</span></span>
+      </div>
+    </div>
+
+    <form class="booking-form reveal-right" id="bookingForm">
+      <div class="form-heading">
+        <span data-i18n="reservationForm">RESERVATION</span>
+        <h3 data-i18n="bookingFormTitle">დაჯავშნის ფორმა</h3>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="firstName" data-i18n="firstName">სახელი</label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" placeholder="სახელი">
+        </div>
+        <div class="form-field">
+          <label for="lastName" data-i18n="lastName">გვარი</label>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" placeholder="გვარი">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="bookingEmail" data-i18n="email">ელფოსტა</label>
+        <input type="email" id="bookingEmail" name="email" required autocomplete="email" placeholder="email@example.com">
+      </div>
+
+      <div class="form-field">
+        <label for="bookingPhone" data-i18n="phone">ტელეფონი</label>
+        <input type="tel" id="bookingPhone" name="phone" required autocomplete="tel" placeholder="+995 5XX XX XX XX">
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="bookingCheckIn" data-i18n="checkIn">ჩასვლის თარიღი</label>
+          <input type="date" id="bookingCheckIn" name="checkIn" required>
+        </div>
+        <div class="form-field">
+          <label for="bookingCheckOut" data-i18n="checkOut">გასვლის თარიღი</label>
+          <input type="date" id="bookingCheckOut" name="checkOut" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="bookingAdults" data-i18n="adults">ზრდასრულები</label>
+          <select id="bookingAdults" name="adults">
+            <option value="1">1</option><option value="2" selected>2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="bookingChildren" data-i18n="children">ბავშვები</label>
+          <select id="bookingChildren" name="children">
+            <option value="0" selected>0</option><option value="1">1</option>
+            <option value="2">2</option><option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="bookingRoomType" data-i18n="selectRoom">აირჩიეთ ნომერი</label>
+        <select id="bookingRoomType" name="roomType" required>
+          <option value="classic" data-i18n="classic">კლასიკური</option>
+          <option value="deluxe" data-i18n="deluxe">დელუქსი</option>
+          <option value="suite" data-i18n="suite">სუიტა</option>
+          <option value="royal" data-i18n="royalSuite">Royal Suite</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="bookingRooms" data-i18n="roomCount">ნომრების რაოდენობა</label>
+        <select id="bookingRooms" name="roomCount">
+          <option value="1">1</option><option value="2">2</option>
+          <option value="3">3</option><option value="4">4</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="specialRequests" data-i18n="specialRequests">დამატებითი მოთხოვნები</label>
+        <textarea id="specialRequests" name="requests" rows="3" data-placeholder="requestPlaceholder" placeholder="მიუთითეთ დამატებითი მოთხოვნები..."></textarea>
+      </div>
+
+      <div class="booking-summary">
+        <div><span data-i18n="stayDuration">ღამეების რაოდენობა</span><strong id="summaryNights">0</strong></div>
+        <div><span data-i18n="estimatedPrice">სავარაუდო ღირებულება</span><strong id="summaryPrice">€0</strong></div>
+        <small data-i18n="priceDisclaimer">ფასი სავარაუდოა და არ წარმოადგენს დადასტურებულ შეთავაზებას.</small>
+      </div>
+
+      <label class="terms-check">
+        <input type="checkbox" id="acceptTerms" required>
+        <span data-i18n="acceptTerms">ვეთანხმები მოთხოვნის დამუშავებას.</span>
+      </label>
+
+      <button class="booking-submit" type="submit">
+        <span data-i18n="submitBooking">გაგზავნეთ ჯავშნის მოთხოვნა</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <p class="form-feedback" id="bookingFeedback" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section testimonials-section">
+  <div class="section-heading reveal">
+    <span class="eyebrow dark-eyebrow" data-i18n="reviewsLabel">სტუმრების შთაბეჭდილებები</span>
+    <h2 data-i18n="reviewsTitle">სიტყვები ჩვენი სტუმრებისგან</h2>
+  </div>
+  <div class="review-box reveal">
+    <div class="review-stars">★★★★★</div>
+    <p id="reviewText"></p>
+    <strong id="reviewAuthor"></strong>
+    <div class="review-controls">
+      <button id="reviewPrev" aria-label="Previous review"><i class="fa-solid fa-arrow-left"></i></button>
+      <span id="reviewCount">01 / 03</span>
+      <button id="reviewNext" aria-label="Next review"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-info reveal-left">
+    <span class="eyebrow dark-eyebrow" data-i18n="contactLabel">ჩვენ მზად ვართ თქვენთვის</span>
+    <h2 data-i18n="contactTitle">დაგეგმეთ თქვენი შემდეგი დასვენება</h2>
+    <p data-i18n="contactText">დაგვიკავშირდით ნებისმიერი შეკითხვისთვის. ჩვენი გუნდი სიამოვნებით დაგეხმარებათ.</p>
+    <div class="contact-details">
+      <div><i class="fa-solid fa-location-dot"></i><p><strong data-i18n="addressLabel">მისამართი</strong><span data-i18n="address">თბილისი, საქართველო</span></p></div>
+      <div><i class="fa-solid fa-phone"></i><p><strong data-i18n="phoneLabel">ტელეფონი</strong><span>+995 555 00 00 00</span></p></div>
+      <div><i class="fa-solid fa-envelope"></i><p><strong>Email</strong><span>info@maisonroyale.ge</span></p></div>
+    </div>
+  </div>
+
+  <form class="contact-form reveal-right" id="contactForm">
+    <h3 data-i18n="sendEnquiry">მოგვწერეთ</h3>
+    <input type="text" name="name" required data-placeholder="namePlaceholder" placeholder="თქვენი სახელი">
+    <input type="email" name="email" required placeholder="email@example.com">
+    <textarea name="message" rows="5" required data-placeholder="messagePlaceholder" placeholder="თქვენი შეტყობინება..."></textarea>
+    <button type="submit" class="button button-dark" data-i18n="sendMessage">შეტყობინების გაგზავნა</button>
+    <p class="form-feedback" id="contactFeedback" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<div class="room-modal" id="roomModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="room-modal-content">
+    <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-gallery">
+      <img id="modalMainImage" src="" alt="Room">
+      <div class="modal-thumbnails" id="modalThumbnails"></div>
+    </div>
+    <div class="modal-info">
+      <span class="eyebrow dark-eyebrow" data-i18n="roomDetails">ნომრის დეტალები</span>
+      <h2 id="modalRoomName"></h2>
+      <p id="modalRoomDescription"></p>
+      <div class="modal-price" id="modalRoomPrice"></div>
+      <div class="modal-facts" id="modalRoomFacts"></div>
+      <h3 data-i18n="amenities">კეთილმოწყობა</h3>
+      <div class="amenities-grid" id="modalAmenities"></div>
+      <a href="#booking" class="button button-gold modal-book" id="modalBookButton" data-i18n="bookThisRoom">ამ ნომრის დაჯავშნა</a>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button id="lightboxClose" aria-label="Close">&times;</button>
+  <img id="lightboxImage" src="" alt="Gallery image">
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand">
+        <span class="brand-name">MAISON ROYALE</span>
+        <span class="brand-sub">LUXURY HOTEL & RESORT</span>
+      </a>
+      <p data-i18n="footerDescription">გამორჩეული სტუმართმოყვარეობა, დახვეწილი გარემო და დაუვიწყარი გამოცდილება.</p>
+      <div class="social-links">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4 data-i18n="quickLinks">სწრაფი ბმულები</h4>
+      <a href="#about" data-i18n="about">ჩვენ შესახებ</a>
+      <a href="#rooms" data-i18n="rooms">ნომრები</a>
+      <a href="#restaurant" data-i18n="restaurant">რესტორანი</a>
+      <a href="#events" data-i18n="events">ღონისძიებები</a>
+    </div>
+    <div class="footer-column">
+      <h4 data-i18n="services">სერვისები</h4>
+      <a href="#experiences" data-i18n="pool">საცურაო აუზი</a>
+      <a href="#experiences" data-i18n="spa">SPA & Wellness</a>
+      <a href="#experiences" data-i18n="fineDining">გასტრონომია</a>
+      <a href="#booking" data-i18n="bookNow">დაჯავშნა</a>
+    </div>
+    <div class="footer-column">
+      <h4 data-i18n="newsletter">სიახლეები</h4>
+      <p data-i18n="newsletterText">გამოიწერეთ სიახლეები და მიიღეთ შეთავაზებები.</p>
+      <form id="newsletterForm">
+        <input type="email" required placeholder="Email" aria-label="Email">
+        <button type="submit" data-i18n="subscribe">გამოწერა</button>
+      </form>
+      <p id="newsletterFeedback" class="form-feedback"></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 MAISON ROYALE. <span data-i18n="rights">ყველა უფლება დაცულია.</span></span>
+    <span data-i18n="footerTagline">შექმნილია ელეგანტურობისთვის.</span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
